@@ -1,0 +1,51 @@
+[
+  {
+    "path": "/",
+    "component": "C:\\\\Users\\\\Dell\\\\Desktop\\\\LG\\\\fed-e-001\\\\codes\\\\03-03-框架-vuex-ssr\\\\code\\\\realworld-nuxtjs\\\\pages\\\\layout",
+    "children": [
+      {
+        "name": "home",
+        "path": "/",
+        "component": "C:\\\\Users\\\\Dell\\\\Desktop\\\\LG\\\\fed-e-001\\\\codes\\\\03-03-框架-vuex-ssr\\\\code\\\\realworld-nuxtjs\\\\pages\\\\home",
+        "_name": "_27482a5d"
+      },
+      {
+        "name": "login",
+        "path": "/login",
+        "component": "C:\\\\Users\\\\Dell\\\\Desktop\\\\LG\\\\fed-e-001\\\\codes\\\\03-03-框架-vuex-ssr\\\\code\\\\realworld-nuxtjs\\\\pages\\\\login",
+        "_name": "_7c152caa"
+      },
+      {
+        "name": "register",
+        "path": "/register",
+        "component": "C:\\\\Users\\\\Dell\\\\Desktop\\\\LG\\\\fed-e-001\\\\codes\\\\03-03-框架-vuex-ssr\\\\code\\\\realworld-nuxtjs\\\\pages\\\\login",
+        "_name": "_7c152caa"
+      },
+      {
+        "name": "profile",
+        "path": "/profile/:username",
+        "component": "C:\\\\Users\\\\Dell\\\\Desktop\\\\LG\\\\fed-e-001\\\\codes\\\\03-03-框架-vuex-ssr\\\\code\\\\realworld-nuxtjs\\\\pages\\\\profile",
+        "_name": "_192f092a"
+      },
+      {
+        "name": "settings",
+        "path": "/settings",
+        "component": "C:\\\\Users\\\\Dell\\\\Desktop\\\\LG\\\\fed-e-001\\\\codes\\\\03-03-框架-vuex-ssr\\\\code\\\\realworld-nuxtjs\\\\pages\\\\settings",
+        "_name": "_0ae702a1"
+      },
+      {
+        "name": "editor",
+        "path": "/editor/:slug?",
+        "component": "C:\\\\Users\\\\Dell\\\\Desktop\\\\LG\\\\fed-e-001\\\\codes\\\\03-03-框架-vuex-ssr\\\\code\\\\realworld-nuxtjs\\\\pages\\\\editor",
+        "_name": "_702bef6b"
+      },
+      {
+        "name": "article",
+        "path": "/article/:slug?",
+        "component": "C:\\\\Users\\\\Dell\\\\Desktop\\\\LG\\\\fed-e-001\\\\codes\\\\03-03-框架-vuex-ssr\\\\code\\\\realworld-nuxtjs\\\\pages\\\\article",
+        "_name": "_4b9a8290"
+      }
+    ],
+    "_name": "_7bfac928"
+  }
+]

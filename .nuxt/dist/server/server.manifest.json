@@ -1,0 +1,23 @@
+{
+  "entry": "server.js",
+  "files": {
+    "1.js": "1.js",
+    "2.js": "2.js",
+    "3.js": "3.js",
+    "4.js": "4.js",
+    "5.js": "5.js",
+    "6.js": "6.js",
+    "7.js": "7.js",
+    "server.js": "server.js"
+  },
+  "maps": {
+    "1.js": "1.js.map",
+    "2.js": "2.js.map",
+    "3.js": "3.js.map",
+    "4.js": "4.js.map",
+    "5.js": "5.js.map",
+    "6.js": "6.js.map",
+    "7.js": "7.js.map",
+    "server.js": "server.js.map"
+  }
+}
