@@ -1,5 +1,4 @@
 -bui9bi
-2604150210
 ----
 
 ## NuxtJS
@@ -2520,7 +2519,7 @@ export default {
 
 ```
 
->最终代码都在这儿：https://github.com/2604150210/realworld-nuxtjs
+>最终代码都在这儿：https://github.com/cloveryuan/realworld-nuxtjs
 
 ### 六、Nuxt.js 发布部署
 
@@ -2577,10 +2576,10 @@ export default {
 
 + 把发布包传到服务端
 
-  + 登录服务器：`ssh root@jiailing.com`
+  + 登录服务器：`ssh root@47.110.10.236`
   + 选择一个目录创建一个realworld-nuxtjs文件夹：`mkdir realworld-nuxtjs`
   + `cd realworld-nuxtjs`进入这个文件夹，然后使用`pwd`命令打印当前文件夹路径：`/product/front/realworld-nuxtjs`
-  + 回到本地，使用scp命令往服务器传压缩包：`scp ~/JALProjects/lagou-fed/fed-e-task-03-03/code/realworld-nuxtjs/realworld-nuxtjs.zip root@jiailing.com:/product/front/realworld-nuxtjs`
+  + 回到本地，使用scp命令往服务器传压缩包：`scp ~/JALProjects/lagou-fed/fed-e-task-03-03/code/realworld-nuxtjs/realworld-nuxtjs.zip root@47.110.10.236:/product/front/realworld-nuxtjs`
 
 + 解压
 
@@ -2594,7 +2593,7 @@ export default {
 + 启动服务
 
   + 执行`yarn start`启动服务
-  + 访问：[http://jiailing.com:3000/](http://jiailing.com:3000/)
+  + 访问：[47.110.10.236:2020/](47.110.10.236:2020/)
 
 #### 3. 使用PM2在后台启动应用
 
@@ -2602,7 +2601,7 @@ export default {
 + 官方文档：[https://pm2.io](https://pm2.io)
 + 在生产环境上安装：`npm install --global pm2`
 + 启动：`pm2 start 脚本路径`，即：`pm2 start npm -- start`，我的服务器上使用pm2起yarn貌似有点问题，改为npm就成功了
-+ 访问：[http://jiailing.com:3000/](http://jiailing.com:3000/)
++ 访问：[47.110.10.236:2020/](47.110.10.236:2020/)
 
 PM2常用命令
 
@@ -2656,7 +2655,7 @@ CI/CD服务:
   echo node_modules > .gitignore
   git add .
   git commit -m "first commit"
-  git remote add origin git@github.com:2604150210/realworld-nuxtjs.git
+  git remote add origin git@github.com:cloveryuan/realworld-nuxtjs.git
   git push -u origin master
   ```
 
@@ -2670,9 +2669,9 @@ CI/CD服务:
 
   ![24](./bj_images/24.png)
 
-+ 配置到项目的Secrets中：[https://github.com/2604150210/realworld-nuxtjs/settings/secrets/new](https://github.com/2604150210/realworld-nuxtjs/settings/secrets/new)
++ 配置到项目的Secrets中：[https://github.com/cloveryuan/realworld-nuxtjs/settings/secrets/new](https://github.com/cloveryuan/realworld-nuxtjs/settings/secrets/new)
 
-  回到项目https://github.com/2604150210/realworld-nuxtjs下面
+  回到项目https://github.com/cloveryuan/realworld-nuxtjs下面
 
   Settings -> Secrets -> New Secrets
 
@@ -2688,11 +2687,11 @@ CI/CD服务:
 
   + 下载下来main.yml是用npm来管理项目的，而我用的是yarn，所以对应部分改为yarn
 
-  + 修改对应的服务器路径为：`/product/front/realworld-nuxtjs`
+  + 修改对应的服务器路径为：`/root/realworld-nuxtjs`
 
-  + wget后面的下载地址改为自己的仓库地址：`https://github.com/2604150210/realworld-nuxtjs/releases/latest/download/release.tgz`
+  + wget后面的下载地址改为自己的仓库地址：`https://github.com/cloveryuan/realworld-nuxtjs/releases/latest/download/release.tgz`
 
-  + 在项目里`https://github.com/2604150210/realworld-nuxtjs/settings/secrets/new`配置HOST、USERNAME、PASSWORD、PORT
+  + 在项目里`https://github.com/cloveryuan/realworld-nuxtjs/settings/secrets/new`配置HOST、USERNAME、PASSWORD、PORT
 
     ![26](./bj_images/26.png)
 
@@ -2755,7 +2754,7 @@ CI/CD服务:
             port: ${{ secrets.PORT }}
             script: |
               cd /product/front/realworld-nuxtjs
-              wget https://github.com/2604150210/realworld-nuxtjs/releases/latest/download/release.tgz -O release.tgz
+              wget https://github.com/cloveryuan/realworld-nuxtjs/releases/latest/download/release.tgz -O release.tgz
               tar zxvf release.tgz
               npm install --production
               pm2 reload pm2.config.json
