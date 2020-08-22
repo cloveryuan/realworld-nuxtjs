@@ -31,7 +31,6 @@
     </div>
   </div>
 </template>
-
 <script>
 import { getArticle } from "@/api/article.js";
 import { mapState } from "vuex";
