@@ -38,6 +38,7 @@ import { mapState } from "vuex";
 import MarkdownIt from "markdown-it";
 import ArticleMeta from './components/article-meta'
 import ArticleComments from './components/article-comments'
+
 export default {
   name: "ArticleIndx",
   async asyncData({ params }) {
