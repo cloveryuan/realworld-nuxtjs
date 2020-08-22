@@ -7,7 +7,7 @@
         <ul class="nav navbar-nav pull-xs-right">
           <li class="nav-item">
             <!-- Add "active" class when you're on that page" -->
-            <nuxt-link class="nav-link " to="/" exact>Home</nuxt-link>
+            <nuxt-link class="nav-link" to="/" exact>Home</nuxt-link>
           </li>
           <template v-if="user">
             <li class="nav-item">
@@ -21,13 +21,19 @@
               </nuxt-link>
             </li>
             <li class="nav-item">
-              <nuxt-link class="nav-link" :to="{
+              <nuxt-link
+                class="nav-link"
+                :to="{
                 name:'profile',
                 params:{username:user.username}
-              }">
-                <img :src="user.image" class="user-pic">
+              }"
+              >
+                <img :src="user.image" class="user-pic" />
                 {{user.username}}
               </nuxt-link>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:;" @click.prevent="logout">退出</a>
             </li>
           </template>
           <template v-else>
@@ -59,13 +65,22 @@
 </template>
 
 <script>
-import {mapState} from 'vuex'
+import { mapState } from "vuex";
+const Cookie = process.client ? require("js-cookie") : "";
 export default {
   name: "LayoutIndex",
-  computed:{
-    ...mapState(['user'])
+  computed: {
+    ...mapState(["user"]),
   },
-  methods: {},
+  methods: {
+    logout() {
+      // 删除客户端缓存数据
+      this.$store.commit("setUser", null);
+      // 删除服务端数据持久化
+      Cookie.set("user", null);
+      this.$router.push("/");
+    },
+  },
   components: {},
 };
 </script>

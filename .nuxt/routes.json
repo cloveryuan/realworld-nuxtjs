@@ -1,51 +1,51 @@
 [
   {
     "path": "/",
-    "component": "C:\\\\Users\\\\Dell\\\\Desktop\\\\LG\\\\fed-e-001\\\\codes\\\\03-03-框架-vuex-ssr\\\\code\\\\realworld-nuxtjs\\\\pages\\\\layout",
+    "component": "C:\\\\Users\\\\guain.DESKTOP-KB7B1ER\\\\Desktop\\\\LG\\\\realworld-nuxtjs\\\\pages\\\\layout",
     "children": [
       {
         "name": "home",
         "path": "/",
-        "component": "C:\\\\Users\\\\Dell\\\\Desktop\\\\LG\\\\fed-e-001\\\\codes\\\\03-03-框架-vuex-ssr\\\\code\\\\realworld-nuxtjs\\\\pages\\\\home",
-        "_name": "_27482a5d"
+        "component": "C:\\\\Users\\\\guain.DESKTOP-KB7B1ER\\\\Desktop\\\\LG\\\\realworld-nuxtjs\\\\pages\\\\home",
+        "_name": "_4f0f5301"
       },
       {
         "name": "login",
         "path": "/login",
-        "component": "C:\\\\Users\\\\Dell\\\\Desktop\\\\LG\\\\fed-e-001\\\\codes\\\\03-03-框架-vuex-ssr\\\\code\\\\realworld-nuxtjs\\\\pages\\\\login",
-        "_name": "_7c152caa"
+        "component": "C:\\\\Users\\\\guain.DESKTOP-KB7B1ER\\\\Desktop\\\\LG\\\\realworld-nuxtjs\\\\pages\\\\login",
+        "_name": "_d9d954f2"
       },
       {
         "name": "register",
         "path": "/register",
-        "component": "C:\\\\Users\\\\Dell\\\\Desktop\\\\LG\\\\fed-e-001\\\\codes\\\\03-03-框架-vuex-ssr\\\\code\\\\realworld-nuxtjs\\\\pages\\\\login",
-        "_name": "_7c152caa"
+        "component": "C:\\\\Users\\\\guain.DESKTOP-KB7B1ER\\\\Desktop\\\\LG\\\\realworld-nuxtjs\\\\pages\\\\login",
+        "_name": "_d9d954f2"
       },
       {
         "name": "profile",
         "path": "/profile/:username",
-        "component": "C:\\\\Users\\\\Dell\\\\Desktop\\\\LG\\\\fed-e-001\\\\codes\\\\03-03-框架-vuex-ssr\\\\code\\\\realworld-nuxtjs\\\\pages\\\\profile",
-        "_name": "_192f092a"
+        "component": "C:\\\\Users\\\\guain.DESKTOP-KB7B1ER\\\\Desktop\\\\LG\\\\realworld-nuxtjs\\\\pages\\\\profile",
+        "_name": "_168a3f72"
       },
       {
         "name": "settings",
         "path": "/settings",
-        "component": "C:\\\\Users\\\\Dell\\\\Desktop\\\\LG\\\\fed-e-001\\\\codes\\\\03-03-框架-vuex-ssr\\\\code\\\\realworld-nuxtjs\\\\pages\\\\settings",
-        "_name": "_0ae702a1"
+        "component": "C:\\\\Users\\\\guain.DESKTOP-KB7B1ER\\\\Desktop\\\\LG\\\\realworld-nuxtjs\\\\pages\\\\settings",
+        "_name": "_33e13945"
       },
       {
         "name": "editor",
         "path": "/editor/:slug?",
-        "component": "C:\\\\Users\\\\Dell\\\\Desktop\\\\LG\\\\fed-e-001\\\\codes\\\\03-03-框架-vuex-ssr\\\\code\\\\realworld-nuxtjs\\\\pages\\\\editor",
-        "_name": "_702bef6b"
+        "component": "C:\\\\Users\\\\guain.DESKTOP-KB7B1ER\\\\Desktop\\\\LG\\\\realworld-nuxtjs\\\\pages\\\\editor",
+        "_name": "_7a6901e2"
       },
       {
         "name": "article",
         "path": "/article/:slug?",
-        "component": "C:\\\\Users\\\\Dell\\\\Desktop\\\\LG\\\\fed-e-001\\\\codes\\\\03-03-框架-vuex-ssr\\\\code\\\\realworld-nuxtjs\\\\pages\\\\article",
-        "_name": "_4b9a8290"
+        "component": "C:\\\\Users\\\\guain.DESKTOP-KB7B1ER\\\\Desktop\\\\LG\\\\realworld-nuxtjs\\\\pages\\\\article",
+        "_name": "_48f5b8d8"
       }
     ],
-    "_name": "_7bfac928"
+    "_name": "_62cb4e68"
   }
 ]
