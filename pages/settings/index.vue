@@ -48,6 +48,7 @@
 const Cookie = process.client?require('js-cookie'):''
 import {mapState} from "vuex"
 import { updateUser } from '@/api/user'
+
 export default {
   middleware:['authenticated'],
   name: 'settingsIndex',
