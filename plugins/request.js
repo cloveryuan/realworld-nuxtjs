@@ -2,7 +2,8 @@
  * 基于axios 封装的请求模块
  */
 import axios from 'axios'
-const baseUrl = 'https://conduit.productionready.io'
+// const baseUrl = 'https://conduit.productionready.io'
+ const baseUrl = 'http://realworld.api.fed.lagounews.com'
 export const request  = axios.create({
   baseURL:baseUrl
 })
