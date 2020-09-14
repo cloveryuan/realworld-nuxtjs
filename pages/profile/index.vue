@@ -7,7 +7,7 @@
             <img :src="profile.image?profile.image:'/smiley-cyrus.jpg'" class="user-img" />
             <h4>{{profile.username}}</h4>
             <p>{{profile.bio}}</p>
-            <template v-if="user.username===profile.username">
+            <template v-if="user&&user.username===profile.username">
               <nuxt-link class="btn btn-sm btn-outline-secondary action-btn" to="/settings">
                 <i class="ion-gear-a"></i> Edit Profile Settings
               </nuxt-link>
@@ -116,7 +116,6 @@ import {
   addFavorite
 } from "@/api/article";
 export default {
-  middleware: ["authenticated"],
   name: "profileIndex",
   watchQuery: ["tab", "page"],
   data() {
@@ -128,10 +127,10 @@ export default {
       return Math.ceil(this.articlesCount/this.limit)
     }
   },
-  async asyncData({ params, query }) {
+  async asyncData(context) {
     try {
-      const { tab = "My", page = 1 } = query;
-      const { username } = params;
+      const { tab = "My", page = 1 } = context.query;
+      const { username } = context.params;
       const limit = 10;
       const offset = (page - 1) * limit;
       const articleType = tab === "My" ? "author" : "favorited";
@@ -160,7 +159,7 @@ export default {
   methods: {
     async onFollow(profile) {
       try {
-        if (!profile.username) return this.$router.push("/login");
+        if (!this.user) return this.$router.push("/login");
         profile.followDisabled = true; // 禁用点击
         if (profile.following) {
           // 取消关注
@@ -179,7 +178,7 @@ export default {
     },
     async onFavorite(article) {
       try {
-        if (!this.profile.username) return this.$router.push("/login");
+        if (!this.user) return this.$router.push("/login");
         article.favoriteDisabled = true; // 禁用点击
         if (article.favorited) {
           // 取消点赞

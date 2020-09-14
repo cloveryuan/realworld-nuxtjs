@@ -4,7 +4,7 @@
     <div class="banner">
       <div class="container">
         <h1>{{article.title}}</h1>
-       <article-meta :article="article" :username="user.username"/>
+       <article-meta :article="article" />
       </div>
     </div>
 
@@ -23,7 +23,7 @@
       <hr />
 
       <div class="article-actions">
-        <article-meta :article="article" :username="user.username"/>
+        <article-meta :article="article" />
       </div>
 
       <div class="row">

@@ -19,7 +19,7 @@
       <span class="date">{{article.createdAt | date('MMM DD,YYYY')}}</span>
     </div>
     <!-- 不是自己的 -->
-    <span v-if="article.author.username!==username">
+    <span v-if="!isAuthor">
       <button
         :disabled="article.followDisabled"
         @click="onFollow(article)"
@@ -69,17 +69,20 @@ import {
   addFavorite,
   deleteArticle
 } from "@/api/article.js";
+import { mapState } from "vuex";
 export default {
   name: "ArticleMeta",
   props: {
     article: {
       type: Object,
       required: true,
-    },
-    username: {
-      type: String,
-      required: true,
-    },
+    }
+  },
+    computed: {
+    ...mapState(["user"]),
+     isAuthor () {
+      return this.article.author.username === this.user?.username
+    }
   },
   data() {
     return {};
@@ -87,7 +90,7 @@ export default {
   methods: {
     async onFollow(article) {
       try {
-        if (!this.username) return this.$router.push("/login");
+        if (!this.user) return this.$router.push("/login");
         article.followDisabled = true; // 禁用点击
         if (article.author.following) {
           // 取消关注
@@ -105,7 +108,7 @@ export default {
     },
     async onFavorite(article) {
       try {
-        if (!this.username) return this.$router.push("/login");
+        if (!this.user) return this.$router.push("/login");
         article.favoriteDisabled = true; // 禁用点击
         if (article.favorited) {
           // 取消点赞
